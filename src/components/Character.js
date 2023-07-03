@@ -1,6 +1,6 @@
 // Write your Character component here
-import React, {useState} from 'react'
-import {data} from '../mocks/handlers'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 import Info from './Info'
 import styled from 'styled-components'
 
@@ -8,7 +8,7 @@ import '../css/StarWarsButtons.css'
 import '../css/index.css'
 
 export default function Character() {
-    const [name] = useState(data)
+    const [name, setName] = useState([])
     const [currentCharacterId, setCurrentCharacterId] = useState(null)
 
     const closeDetails = () => {
@@ -48,6 +48,16 @@ export default function Character() {
             0 -2px 0 #FFE81F;
     `
 
+    useEffect(() => {
+        axios.get(`https://swapi.dev/api/people/`)
+          .then(res => {
+            setName(res.data)
+          })
+          .catch(err => {
+            console.log(err)
+          })
+      }, [])
+
     return (
        <div>            
             {name.map((person) => {
@@ -57,7 +67,6 @@ export default function Character() {
                     {currentCharacterId && <Info characterId={currentCharacterId} person={person} close = {closeDetails} />}
                 </div>
 )})}
-            {console.log(currentCharacterId)}
        </div>
     )
 }
