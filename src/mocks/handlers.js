@@ -10,8 +10,18 @@ export const handlers = [
   }),
 ];
 
+// export const movies = [
+//   {id: 1, name: 'The Phantom Menace'},
+//   {id: 2, name: 'Attack of the Clones'},
+//   {id: 3, name: 'Revenge of the Sith'},
+//   {id: 4, name: 'A New Hope'},
+//   {id: 5, name: 'The Empire Strikes Back'},
+//   {id: 6, name: 'Return of the Jedi'}
+// ]
+
 export const data = [
   {
+    id: 1,
     name: "Luke Skywalker",
     height: "172",
     mass: "77",
@@ -41,6 +51,7 @@ export const data = [
     url: "http://swapi.dev/api/people/1/",
   },
   {
+    id: 2,
     name: "C-3PO",
     height: "167",
     mass: "75",
@@ -66,6 +77,7 @@ export const data = [
     url: "http://swapi.dev/api/people/2/",
   },
   {
+    id: 3,
     name: "R2-D2",
     height: "96",
     mass: "32",
@@ -91,6 +103,7 @@ export const data = [
     url: "http://swapi.dev/api/people/3/",
   },
   {
+    id: 4,
     name: "Darth Vader",
     height: "202",
     mass: "136",
@@ -115,6 +128,7 @@ export const data = [
     url: "http://swapi.dev/api/people/4/",
   },
   {
+    id: 5,
     name: "Leia Organa",
     height: "150",
     mass: "49",
@@ -138,6 +152,7 @@ export const data = [
     url: "http://swapi.dev/api/people/5/",
   },
   {
+    id: 6,
     name: "Owen Lars",
     height: "178",
     mass: "120",
@@ -158,11 +173,6 @@ export const data = [
 ];
 
 export const films = [
-  {
-    count: 6,
-    next: null,
-    previous: null,
-    results: [
       {
         title: "A New Hope",
         episode_id: 4,
@@ -667,6 +677,4 @@ export const films = [
         edited: "2014-12-20T20:47:52.073000Z",
         url: "http://swapi.dev/api/films/6/",
       },
-    ],
-  },
-];
+    ]
