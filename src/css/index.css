@@ -27,6 +27,8 @@ body {
   justify-content: space-evenly;
   border-color: black;
   background-image: url('../images/star-wars-sky.jpg');
+  background-position: left;
+  background-attachment: fixed;
   color: black;
 }
 
